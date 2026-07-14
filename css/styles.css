@@ -1027,6 +1027,70 @@
   .mf-blog-status.is-live { color: var(--forest); opacity: .85; }
   .mf-blog-status.is-error { color: var(--rust); opacity: .65; }
 
+  .mf-platform-label {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--forest);
+  }
+  .mf-platform-icon { font-size: 16px; line-height: 1; }
+  .mf-platform-label a { color: var(--forest); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+  .mf-platform-label a:hover { color: var(--rust); }
+
+  .mf-tiktok-placeholder {
+    background: rgba(39,79,16,.04); border: 1px dashed rgba(39,79,16,.25);
+    border-radius: 4px; padding: 20px; display: flex; align-items: center;
+    justify-content: center; min-height: 120px;
+  }
+  .mf-tiktok-placeholder a {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--forest);
+  }
+
+  /* ---------- MINDFLOW SOCIAL / VIDEO ---------- */
+  .mf-social-intro {
+    font-size: 14px; line-height: 1.8; color: var(--charcoal);
+    opacity: 0.8; max-width: 640px; margin: 0 0 32px;
+  }
+
+  .mf-role-strip {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px;
+  }
+  .mf-role-pill {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--forest);
+    border: 1px solid rgba(39,79,16,.35); padding: 6px 14px; border-radius: 100px;
+  }
+
+  .mf-video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+
+  .mf-video-card { display: flex; flex-direction: column; gap: 14px; }
+
+  /* Override Instagram's own iframe dimensions to fill the column */
+  .mf-video-card .instagram-media {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .mf-video-meta { display: flex; flex-direction: column; gap: 6px; }
+  .mf-video-label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--rust); opacity: .8;
+  }
+  .mf-video-note {
+    font-size: 13px; line-height: 1.65; color: var(--charcoal); opacity: .65;
+  }
+
+  @media (max-width: 860px) {
+    .mf-video-grid { grid-template-columns: 1fr; max-width: 420px; }
+  }
+
 
     .email-card { grid-template-columns: 1fr; }
     .email-preview-wrap { height: 320px; }
